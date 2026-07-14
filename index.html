@@ -95,11 +95,8 @@
         <span class="window-title">// BASE.EXE — база гайдов</span>
         <span class="window-controls"><i>_</i><i>□</i><i>✖</i></span>
       </div>
-      <div class="window-body">
-        <p class="placeholder-note">
-          Список всех гайдов сообщества: заброшки, крыши, подземные объекты —
-          с описанием, сложностью и твоими заметками из личного опыта.
-        </p>
+      <div class="window-body window-body--list">
+        <div id="guide-list" class="guide-list"></div>
       </div>
     </section>
 
@@ -109,12 +106,27 @@
         <span class="window-controls"><i>_</i><i>□</i><i>✖</i></span>
       </div>
       <div class="window-body">
-        <p class="placeholder-note">История посещений и обновлений базы появится здесь.</p>
+        <div class="log-entry">
+          <div class="log-entry-head">
+            <span class="log-tag">UPDATE</span>
+            <span class="log-version">v1.1</span>
+          </div>
+          <ul class="log-list">
+            <li><span class="log-status ok">[OK]</span> Добавлен первый гайд в базу — <strong>«Охранные системы»</strong></li>
+            <li><span class="log-status ok">[OK]</span> BASE.EXE теперь показывает гайды карточками: фото, название, краткое описание</li>
+            <li><span class="log-status ok">[OK]</span> Добавлена страница чтения гайда на весь экран, в едином стиле с остальным интерфейсом</li>
+            <li><span class="log-status new">[NEW]</span> Гайд «Охранные системы» разбирает 5 типов защиты: датчики движения, камеры, периметральные ИК-барьеры, сигнализацию и герконы</li>
+          </ul>
+        </div>
       </div>
     </section>
   </div>
 
+  <!-- ===== СТРАНИЦА ЧТЕНИЯ ГАЙДА (полноэкранный оверлей) ===== -->
+  <div id="guide-reader" class="guide-reader"></div>
+
   <script src="script.js"></script>
   <script src="app.js"></script>
+  <script src="guides.js"></script>
 </body>
 </html>
